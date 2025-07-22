@@ -1,13 +1,7 @@
 ## K邻近法
 
+![配置](/images/Pasted%20image%2020250706152822.png)
 
-![pic](/images/Pasted%20image%2020250706201108.png)
+呜呜呜呜呜www可以打字了
 
-
-don't use unmeaningful note to submit a commit.
-
-described what you 
-ok 
-
-delete it 
-i 'll remember next time
+豆包打开
