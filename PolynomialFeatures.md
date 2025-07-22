@@ -20,7 +20,9 @@ print(pf.fit_transform(a))
 pf=PolynomialFeatures(degree=2,interaction_only=True)
 print(pf.fit_transform(a))
 ```
+
 结果如下
+
 ```python
 [[1. 2. 3. 4. 6. 9.]]
 [[2. 3. 4. 6. 9.]]
@@ -33,9 +35,10 @@ print(pf.fit_transform(a))
 c=[[2],[3]]
 print(pf.fit_transform(c))
 ```
+
 结果如下
+
 ```python
 [[2. 4.]
  [3. 9.]]
 ```
-
