@@ -1,7 +1,7 @@
 ## K邻近法
 
-![配置](/images/Pasted%20image%2020250706152822.png)
 
-呜呜呜呜呜www可以打字了
+![pic](/images/Pasted%20image%2020250706201108.png)
 
-豆包打开
+thanks
+a lot
