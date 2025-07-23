@@ -28,6 +28,7 @@ Git提交文件到版本库有两步：
 现在使用git add 命令把两个文件都添加到暂存区中，使用git commit一次性提交到分支，并且使用git status 查看前后两次都状态：
 
 ![fix](/images/image-1.png)
+
 ![fix](/images/image-2.png)
 
 ## Git撤销修改和删除文件操作
@@ -111,6 +112,7 @@ Git提交文件到版本库有两步：
 现在远程库已经准备好了，下一步是准备命令`git clone`克隆一个本地库了。
 
 ![fix](/images/image-17.png)
+
 克隆结果如下：
 
 ![fix](/images/image-16.png)
