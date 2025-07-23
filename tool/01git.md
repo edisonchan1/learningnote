@@ -1,3 +1,10 @@
+---
+title: git操作
+date: 2025-07-23
+updated: 2025-07-23
+description:
+---
+
 ## 基础命令
 
 `git add + file`：跟踪
