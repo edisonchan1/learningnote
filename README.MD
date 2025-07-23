@@ -62,4 +62,4 @@ plt.title('Decision Boundary for QDA')
 - [ ] learn how to git, and upload to github
 - [ ] learn markdown language
   - [ ] how to insert latex in it
-  - [x] how to display /images/image, the uri to load
+  - [x] how to display image, the uri to load
