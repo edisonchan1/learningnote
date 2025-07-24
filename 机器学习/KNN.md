@@ -1,7 +1,7 @@
 ---
 title: K近邻法
-date: 2025-07-23
-updated: 2025-07-23
+date: 2025-07-24
+updated: 2025-07-24
 description:
 ---
 
