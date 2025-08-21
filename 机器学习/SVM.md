@@ -12,7 +12,7 @@ SVM在变量较多的数据中有很多成功的应用，比如文本分析与�
 
 在二维空间：
 
-![alt text](image.png)
+![fix](/images/imageSVM.png)
 
 如果在三维空间，则可由一个平面分离。
 
@@ -36,7 +36,7 @@ $\vert \beta_0 + \boldsymbol{\beta}' \mathbf{x} \vert$的大小可用于度量�
 
 在线性可分的情况下，分离超平面一般并不唯一，因为总可以稍微移动超平面，而依然将两类数据分离，这里就要考虑最大间隔分类器。
 
-![alt text](image-1.png)
+![fix](/images/imageSVM-1.png)
 
 ### 最大间隔分类器
 
@@ -52,7 +52,7 @@ $\vert \beta_0 + \boldsymbol{\beta}' \mathbf{x} \vert$的大小可用于度量�
 
 而“$y_i = -1$”为另一类数据(称为“反例”，图中的黑点)。
 
-![alt text](image-2.png)
+![fix](/images/imageSVM-2.png)
 
 希望用超平面分离这两类数据，即找到一个函数 $f(X) = \beta_0+X'\beta$，弱 $f(X)>0$，则预测 $\hat y=1$；反之，若 $f(X)<$，预测 $\hat y = -1$
 
@@ -105,7 +105,7 @@ $$
 
 在所有样本点中，到分离超平面 $L$ 的最小距离的两倍，称为间隔。
 
-![alt text](image-2.png)
+![fix](/images/imageSVM-2.png)
 
 回顾此图，有三个样本点落在间隔上，其中一个蓝点，两个黑点。
 
@@ -150,7 +150,7 @@ $$
 
 在训练集中的间隔越大，则我们期待在测试集中的间隔越越大，由此带来更好的泛化能力。
 
-![alt text](image-3.png)
+![fix](/images/imageSVM-3.png)
 
 最大化$\dfrac{2}{\|\boldsymbol{\beta}\|}$等价于最小化$\|\boldsymbol{\beta}\|$，而后者又等价于最小化$\dfrac{1}{2}\|\boldsymbol{\beta}\|^2 = \dfrac{1}{2}\boldsymbol{\beta}'\boldsymbol{\beta}$。  
 
@@ -272,7 +272,7 @@ $$
 
 并非所有数据都是线性可分的。如下图：
 
-![alt text](image-4.png)
+![fix](/images/imageSVM-4.png)
 
 对于线性不可分的数据，可放松对于约束条件的要求，即只要求分离超平面将大多数观测值正确分离，而允许少量错误分类(或落入间隔之内)的观测值。
 
@@ -299,7 +299,7 @@ $$
 
 对于软间隔分类器，所有在**间隔上、间隔内与分类错误**的样本点，**都是支持向量**，因为它们都对最优解有影响。
 
-![alt text](image-5.png)
+![fix](/images/imageSVM-5.png)
 
 如果惩罚参数 $C$ 为无穷大，则意味着算法不容忍训练样本中的任何分类错误。
 
@@ -307,7 +307,7 @@ $$
 
 即使对于线性可分的数据，硬间隔分类器也可能不稳健，容易受到**极端值**(outlier)的影响。
 
-![alt text](image-6.png)
+![fix](/images/imageSVM-6.png)
 
 在上图中，最上方的黑点为极端值。此极端值对于分离超平面的位置有很大影响，而且导致最大间隔非常狭窄。
 
@@ -413,7 +413,7 @@ $$
 
 在数据线性不可分的情况下，一般存在非线性的决策边界。
 
-![alt text](image-7.png)
+![fix](/images/imageSVM-7.png)
 
 在上图中，不存在任何线性的分离超平面，但存在一个近乎圆形的决策边界。
 
@@ -442,7 +442,7 @@ $$
 
 **例** 在桌上叠放一张黑纸与白纸。黑纸上的黑点属于一类，而白纸上的白点属于另一类。显然，这两类点可用超平面分离。现将这两张纸揉成一团，则无法再用超平面分离黑点与白点。然而，若将这两张纸再摊平捋顺（特征变换 $\boldsymbol{\varphi}(\cdot)$ ），则又可用超平面分离黑点与白点。
 
-![alt text](image-8.png)
+![fix](/images/imageSVM-8.png)
 
 根据上述推导，支持向量机的估计结果仅依赖于 $\left\langle \boldsymbol{\varphi}(\mathbf{x}_i), \boldsymbol{\varphi}(\mathbf{x}_j) \right\rangle$，即 $\boldsymbol{\varphi}(\mathbf{x}_i)$ 与 $\boldsymbol{\varphi}(\mathbf{x}_j)$ 的内积，而不必知道 $\boldsymbol{\varphi}(\cdot)$ 。
 
@@ -498,7 +498,7 @@ $$
 
 在最大间隔分类器最优解 $\hat f(X)$ 的表达式中，以变换后的 $\varphi(X)$ 替代 $X$ 可得
 
-![alt text](image-9.png)
+![fix](/images/imageSVM-9.png)
 
 $$
 \begin{align*}
@@ -563,7 +563,7 @@ $$
 
 反之，若残差 $z_i$ 的绝对值大于 $\varepsilon$，则损失为 $\vert z_i \vert - \varepsilon$，呈 1 对 1 的线性增长
 
-![alt text](image-10.png)
+![fix](/images/imageSVM-10.png)
 
 与平方损失函数相比，$\varepsilon-$ 不敏感损失函数存在一个半径为 $\varepsilon$ 的不敏感带，其损失函数为0。出了此敏感带后，$\varepsilon-$ 不敏感损失函数呈线性增长，其增长速度不及平方损失的二次函数。
 
@@ -598,3 +598,252 @@ $\varepsilon-$ 不敏感损失函数为线性函数，故对于极端值不敏�
 另外，由于SVM使用超平面进行分类，故无法从概率的角度解释：比如，无法算出观测值分类归属的后验概率。
 
 ### 案例
+
+导包：
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold,StratifiedKFold
+from sklearn.model_selection import GridSearchCV
+from sklearn.svm import SVC
+from sklearn.svm import SVR
+from sklearn.svm import LinearSVC
+from sklearn.datasets import load_digits
+from sklearn.datasets import make_blobs
+from sklearn.datasets import load_iris
+```
+
+```python
+X,y = make_blobs(n_samples=40,centers = 2,n_features=2,random_state=6) # 随机生成数据的函数
+y = 2*y-1
+data = pd.DataFrame(X,columns=['x1','x2'])
+sns.scatterplot(x='x1',y = 'x2',data = data,hue=y,palette=['blue','black']
+                )
+```
+
+```python
+model = LinearSVC(C = 1000,loss = 'hinge',random_state=123) # 惩罚参数很大，损失函数用合页损失函数表示
+model.fit(X,y)
+dist = model.decision_function(X) # decision_function(X) = w·X + b，计算样本到超平面的距离
+index = np.where(y * dist <= (1 + 1e-10)) # 包括间隔类分类正确和分类错误的数据
+X[index] # 两个样本的两个特征值
+
+array([[ 5.73005848, -4.19481136],
+       [ 7.89359985, -7.41655113]])
+```
+
+超平面生成：
+
+```python
+def support_vectors(model,X,y):
+    model.fit(X,y)
+    dist = model.decision_function(X)
+    index = np.where(y*dist <= (1+1e-10))
+    return X[index]
+
+support_vectors(model,X,y) # 返回支持向量的索引
+```
+
+```python
+def svm_plot(model,X,y):
+    data = pd.DataFrame(X,columns=['x1','x2'])
+    data['y'] = y
+    sns.scatterplot(x = 'x1',y = 'x2',data = data,s = 30,hue = y,palette=['blue','black'])
+    s_vectors = support_vectors(model,X,y)
+    plt.scatter(s_vectors[:,0],s_vectors[:,1],s = 100,linewidths=1,facecolors = 'none',edgecolors='k')
+    ax = plt.gca() #get current axes
+    xlim = ax.get_xlim()
+    ylim = ax.get_ylim()
+    xx,yy = np.meshgrid(np.linspace(xlim[0],xlim[1],50),np.linspace(ylim[0],ylim[1],50))
+    z = model.decision_function(np.c_[xx.ravel(),yy.ravel()]) # 表格中每个点到决策边界的距离和方向
+    z = z.reshape(xx.shape)
+    plt.contour(xx,yy,z,colors = 'k',levels = [-1,0,1],alpha = 0.5,linestyles = ['--','-','--']) # 决策边界和间隔线 
+    C = model.get_params()['C']
+    plt.title(f'SVM(C = {C})')
+
+svm_plot(model,X,y)
+```
+
+![fix](/images/imageSVM-11.png)
+
+```python
+model = LinearSVC(C = 0.1,loss = 'hinge',random_state=123,max_iter= 10000) # 减小惩罚项.查看理论部分
+model.fit(X,y)
+support_vectors(model,X,y)
+svm_plot(model,X,y)
+```
+
+![fix](/images/imageSVM-12.png)
+
+处理垃圾邮箱：
+
+```python
+# SVM 在垃圾邮件（Spam）二分类中的应用简要解析
+spam = pd.read_csv('spam.csv')
+X = spam.iloc[:,:-1]
+y = spam.iloc[:,-1]
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=1000,stratify=y,random_state=0)
+X.describe
+
+
+```
+
+线性
+
+```python
+scaler = StandardScaler()
+scaler.fit(X_train) #标准化
+X_train_s = scaler.transform(X_train)
+X_test_s = scaler.transform(X_test)
+
+model = SVC(kernel='linear',random_state=123)
+model.fit(X_train_s,y_train)
+model.score(X_test_s,y_test)
+
+0.935
+```
+
+```python
+model = SVC(kernel="poly", degree=2, random_state=123)
+model.fit(X_train_s, y_train)
+model.score(X_test_s, y_test)
+
+0.848
+
+model = SVC(kernel="poly", degree=3, random_state=123) #K(x, x') = (γ·x·x' + r)^degree
+model.fit(X_train_s, y_train)
+model.score(X_test_s, y_test)
+
+0.77
+
+model = SVC(kernel="rbf", random_state=123)
+model.fit(X_train_s, y_train)
+model.score(X_test_s, y_test)
+
+0.944
+
+model = SVC(kernel="sigmoid",random_state=123)
+model.fit(X_train_s, y_train)
+model.score(X_test_s, y_test)
+
+0.891
+```
+
+```python
+param_grid = {'C': [0.1, 1, 10], 'gamma': [0.01, 0.1, 1]}
+kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=1)
+model = GridSearchCV(SVC(kernel="rbf", random_state=123), param_grid, cv=kfold)
+model.fit(X_train_s, y_train)
+model.best_params_
+model.score(X_test_s, y_test)
+# 交叉验证
+
+```
+
+接下来看多分类的SVM
+
+```python
+# 多分类SVM
+digit = load_digits()
+dir(digit) # 返回字典类型自带的所有方法和属性名称
+```
+
+```python
+pd.Series(digit.target).value_counts()
+plt.imshow(digit.images[8], cmap=plt.cm.gray_r)
+
+```
+
+![fix](/images/imageSVM-13.png)
+
+获取所有标签为数字8的索引
+
+```python
+images_8 = digit.images[digit.target==8]
+for i in range(1,17):
+    plt.subplot(4,4,i)
+    plt.imshow(images_8[i-1],cmap=plt.cm.gray_r)
+
+plt.tight_layout
+```
+
+![fix](/images/imageSVM-14.png)
+
+```python
+X = digit.data
+y = digit.target
+X_train,X_test,y_train,y_test = train_test_split(X,y,stratify=y,test_size=0.2,random_state=0)
+model = SVC(kernel='linear',random_state=123)
+model.fit(X_train,y_train)
+model.score(X_test,y_test)
+0.9722222222222222
+
+model = SVC(kernel="poly", degree=2, random_state=123)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+0.9888888888888889
+
+model = SVC(kernel="poly", degree=3, random_state=123)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+0.9944444444444445
+
+model = SVC(kernel='rbf', random_state=123)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+0.9833333333333333
+
+model = SVC(kernel="sigmoid",random_state=123)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+0.8916666666666667
+
+param_grid = {'C': [0.001, 0.01, 0.1, 1, 10], 'gamma': [0.001, 0.01, 0.1, 1, 10]}
+kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=1)
+model = GridSearchCV(SVC(kernel='rbf',random_state=123), param_grid, cv=kfold)
+model.fit(X_train, y_train)
+model.best_params_
+model.score(X_test, y_test)
+0.9888888888888889
+```
+
+波士顿房间预测的SVR模型
+
+```python
+boston = pd.read_csv('boston_house_prices.csv')
+X = boston.iloc[:,:-1]
+y = boston.iloc[:,-1]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train_s = scaler.transform(X_train)
+X_test_s = scaler.transform(X_test)
+
+model = SVR(kernel='rbf')
+model.fit(X_train_s, y_train)
+model.score(X_test_s, y_test)
+
+0.6638733322326673
+
+param_grid = {'C': [0.01, 0.1, 1, 10, 50, 100, 150], 'epsilon': [0.01, 0.1, 1, 10], 'gamma': [0.01, 0.1, 1, 10]}
+kfold = KFold(n_splits=10, shuffle=True, random_state=1)
+
+model = GridSearchCV(SVR(), param_grid, cv=kfold)
+model.fit(X_train_s, y_train)
+model.best_params_
+
+{'C': 100, 'epsilon': 1, 'gamma': 0.1}
+
+model.score(X_test_s, y_test)
+
+0.9155607536119317
+```
+
+以上是本章全部代码，都是用sklearn写的，不难看懂，注释不多
+后续更新手搓版本SVM。
